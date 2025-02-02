@@ -21,4 +21,4 @@ console.log(
   process?.env?.AMPLIFY_ENV || "development"
 );
 
-export default environments[process?.env?.AMPLIFY_ENV || "local"];
+export default environments[process?.env?.AMPLIFY_ENV || "development"];
