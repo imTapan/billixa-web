@@ -6,7 +6,7 @@ const environments = {
   },
   development: {
     name: "development",
-    ENDPOINT: "https://billixa.netlify.app",
+    ENDPOINT: "https://billixa-web.netlify.app",
     COOKIE_HOST: ".netlify.app",
   },
   production: {
