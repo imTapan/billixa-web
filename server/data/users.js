@@ -1,4 +1,13 @@
-export default users = [
+const users = [
+  {
+    id: "ifiuuy34t8fo83t1",
+    name: "Tapan",
+    mobile: "7878756903",
+    email: "tapan@email.com",
+    password: "Tapan@123",
+    village: "junagadh",
+    avatar: "https://cdn-icons-png.flaticon.com/128/3242/3242257.png",
+  },
   {
     id: "ifiuuy34t8o83t1",
     name: "Bhikho",
@@ -45,3 +54,5 @@ export default users = [
     avatar: "https://cdn-icons-png.flaticon.com/128/2870/2870898.png",
   },
 ];
+
+export default users;

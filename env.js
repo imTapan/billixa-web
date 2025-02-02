@@ -1,12 +1,12 @@
 const environments = {
   local: {
     name: "localhost",
-    ENDPOINT: "http://localhost:3030",
+    ENDPOINT: "http://localhost:3000/api",
     COOKIE_HOST: "localhost",
   },
   development: {
     name: "development",
-    ENDPOINT: "http://localhost:3030",
+    ENDPOINT: "https://billixa.netlify.app",
     COOKIE_HOST: ".netlify.app",
   },
   production: {

@@ -79,14 +79,25 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
   isLoading.value = true;
 
   await $axios
-    .post("/auth/login", event.data)
+    .post("/login", event.data)
     .then(({ data }: any) => {
-      store.setUser(data?.user);
+      if (data?.id) {
+        store.setUser(data);
+      } else {
+        console.log("data", data);
+
+        toast.add({
+          title: "Login Failed",
+          description: data?.body?.message || "Something went wrong",
+          icon: "mdi:alert-circle",
+          color: "red",
+        });
+      }
     })
     .catch((err: any) => {
       toast.add({
         title: "Login Failed",
-        description: err?.response?.data?.message || "Something went wrong",
+        description: "Something went wrong",
         icon: "mdi:alert-circle",
         color: "red",
       });

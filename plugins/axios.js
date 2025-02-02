@@ -4,7 +4,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   const runtimeConfig = useRuntimeConfig();
   const axiosInstance = axios.create({
     baseURL: runtimeConfig.public.ENDPOINT,
-    withCredentials: true,
+    // withCredentials: true,
   });
 
   axiosInstance.interceptors.request.use(

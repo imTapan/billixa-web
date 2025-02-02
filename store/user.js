@@ -19,7 +19,7 @@ export const useUserStore = defineStore("user", () => {
 
     toast.add({
       title: "Welcome back!",
-      description: "You have successfully logged in as " + data?.fullName,
+      description: "You have successfully logged in as " + data?.name,
       icon: "mdi:login-variant",
       status: "success",
       color: "green",

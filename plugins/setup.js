@@ -10,9 +10,9 @@ export default defineNuxtPlugin(async (nuxtApp) => {
 
   if (userId.value) {
     return await $axios
-      .get(`/users/${userId.value}`)
+      .get(`/user/${userId.value}`)
       .then(({ data }) => {
-        store.setUser(data?.data);
+        store.setUser(data);
       })
       .catch((error) => {
         store.logoutUser(1);

@@ -1,4 +1,4 @@
-import users from "@/data/users";
+import users from "~/server/data/users";
 
 export default defineEventHandler(async (event) => {
   const { id } = event.context.params;

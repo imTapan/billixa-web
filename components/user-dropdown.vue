@@ -7,6 +7,8 @@ const store = useUserStore();
 const target = ref(null);
 const dropdownOpen = ref(false);
 
+const userDetail = computed(() => store.getUser);
+
 onClickOutside(target, () => {
   dropdownOpen.value = false;
 });
@@ -14,10 +16,21 @@ onClickOutside(target, () => {
 
 <template>
   <div class="relative" ref="target">
-    <button class="flex items-center" @click="dropdownOpen = !dropdownOpen">
-      <UIcon name="mdi:account-circle-outline" class="h-8 w-8 rounded-full">
-      </UIcon>
-
+    <button class="flex items-center gap-1" @click="dropdownOpen = !dropdownOpen">
+      <div class="flex items-center justify-center md:gap-2">
+        <img
+          v-if="userDetail?.avatar"
+          :src="userDetail.avatar"
+          class="h-8 w-8 rounded-full"
+        />
+        <UIcon
+          v-else
+          name="mdi:account-circle-outline"
+          class="h-8 w-8 rounded-full"
+        >
+        </UIcon>
+        <p class="text-lg hidden md:flex" v-if="userDetail?.name">{{ userDetail?.name }}</p>
+      </div>
       <UIcon
         name="mdi:menu-down"
         :class="dropdownOpen && 'rotate-180'"

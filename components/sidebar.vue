@@ -17,9 +17,9 @@
       </button>
       <NuxtLink
         to="/"
-        class="flex items-center justify-center gap-1 flex-col w-full py-2"
+        class="flex items-center justify-center gap-1 flex-col w-full pt-10 mb-2"
       >
-        <img src="/public/logo.png" alt="Logo" class="w-24" />
+        <img src="/public/logo.png" alt="Logo" class="w-16" />
         <h2 class="font-bold text-2xl">Billixa</h2>
       </NuxtLink>
     </div>
@@ -27,7 +27,7 @@
     <!-- Navigations -->
     <div class="flex flex-col duration-300 ease-linear grow">
       <!-- Sidebar Menu -->
-      <nav class="mt-5 py-4 px-4 md:mt-9 md:px-6 space-y-2">
+      <nav class="py-4 px-4 md:mt-3 md:px-4 space-y-2">
         <NuxtLink
           v-for="item in sidebarRoutes"
           class="group relative flex items-center gap-2.5 py-2 px-4 font-medium duration-300 ease-in-out hover:bg-gray-800 rounded dark:hover:bg-meta-4"
@@ -67,19 +67,9 @@ const sidebarRoutes = ref([
     route: "/",
   },
   {
-    icon: `ri:auction-line`,
-    label: "Auctions",
-    route: "/auctions",
-  },
-  {
-    icon: `material-symbols:leaderboard-outline-rounded`,
-    label: "Leads",
-    route: "/leads",
-  },
-  {
-    icon: `streamline:investment-selection`,
-    label: "Investors",
-    route: "/investors",
+    icon: `mdi:user`,
+    label: "Profile",
+    route: "/profile",
   },
 ]);
 </script>
